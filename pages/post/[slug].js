@@ -5,7 +5,7 @@ import {Avatar, Image, message} from 'antd'
 import {useForm} from 'react-hook-form'
 import Link from 'next/link'
 
-function post({data}) {
+function Post({data}) {
     const {handleSubmit, register, formState:{errors}} = useForm()
     const {comments} = data[0]
     const onsubmit = async(data) => {
@@ -99,7 +99,7 @@ function post({data}) {
   )
 }
 
-export default post
+export default Post
 
 export const getStaticPaths = async()=> {
     const query = `*[_type == "post"]{
